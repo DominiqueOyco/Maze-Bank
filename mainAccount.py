@@ -21,17 +21,30 @@ Created on Sat Jun  6 21:10:44 2020
 #    app = App(root)
 #    app.mainLoop
 
-from tkinter import Tk, Label, Entry, Frame, Button 
+from tkinter import Tk, Label, Entry, Frame, Button, PhotoImage
+from PIL import ImageTk, Image
 
 window = Tk()
-# add widgets here
+
+#canvas=Canvas(window, width=720, height=480)
+#mzebnkImg=Image.open('')
+#photo=ImageTk.PhotoImage(mzebnkImg)
+#label=Label(window, image=photo)
+#label.pack()
+
+#bgImage = PhotoImage(file = r"LSBank-GTAV.png")
+#Label(window, image = bgImage).place(relwidth = 1, relheight = 1)
+
+img = ImageTk.PhotoImage(Image.open("LSBank-GTAV.png"))  
+l=Label(image=img)
+l.pack()
 
 window.title('Maze Bank of Los Santos')
 window.geometry("720x480+10+20")
 entbtn=Button(window, text="SIGN IN", fg='blue')
 entbtn.place(x=330, y=290)
-entbtn=Button(window, text="EXIT", fg='blue')
-entbtn.place(x=338, y=330)
+extbtn=Button(window, text="EXIT", fg='blue', command=window.quit)
+extbtn.place(x=338, y=330)
 lbl=Label(window, text="Welcome to the Maze Bank of Los Santos", 
           fg='red', font=("Avenir", 16))
 lbl.place(x=210, y=50)
@@ -40,6 +53,6 @@ usrent.place(x=260, y=130)
 passent=Entry(window, text="Password", fg='red', font=("Avenir", 16))
 passent.place(x=260, y=210)
 cpylbl=Label(window, text="© 2020 Maze Bank Inc. All Rights Reserved.", 
-             fg='red', font=("Avenir", 16))
-cpylbl.place(x=210, y=50)
+             fg='red', font=("Avenir", 10))
+cpylbl.place(x=250, y=400)
 window.mainloop()
