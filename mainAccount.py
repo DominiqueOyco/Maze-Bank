@@ -39,8 +39,17 @@ img = ImageTk.PhotoImage(Image.open("LSBank-GTAV.png"))
 l=Label(image=img)
 l.pack()
 
+# Gets the requested values of the height and widht.
+windowWidth = window.winfo_reqwidth()
+windowHeight = window.winfo_reqheight()
+
+# Gets both half the screen width/height and window width/height
+positionRight = int(window.winfo_screenwidth()/2 - windowWidth/2)
+positionDown = int(window.winfo_screenheight()/2 - windowHeight/2)
+
 window.title('Maze Bank of Los Santos')
-window.geometry("720x480+10+20")
+#window.geometry("720x480+10+20")
+window.geometry("+{}+{}".format(positionRight, positionDown))
 entbtn=Button(window, text="SIGN IN", fg='blue')
 entbtn.place(x=330, y=290)
 extbtn=Button(window, text="EXIT", fg='blue', command=window.quit)
