@@ -28,6 +28,22 @@ class newUser():
     window.geometry("720x480+{}+{}".format(positionRight, positionDown))
     window.resizable(0,0)
     
+    #Creating new user account
+    newusraccslbl=tk.Label(window, 
+                           text="Create new 6-digit Access ID", 
+                           fg='red', font=("Avenir", 10))
+    newusraccslbl.place(x=260, y=110)
+    usrent=tk.Entry(window, text="Access ID", fg='red', font=("Avenir", 16))
+    usrent.place(x=260, y=130)
+    newusrpasslbl=tk.Label(window, 
+                           text="Create new Password", 
+                           fg='red', font=("Avenir", 10))
+    newusrpasslbl.place(x=260, y=190)
+    passent=tk.Entry(window, text="Password", fg='red', font=("Avenir", 16))
+    passent.place(x=260, y=210)              
+    
+    
+    
     #When user clicks the buttons    
     newUsrbtn=tk.Button(window, text="CREATE NEW ACCOUNT", fg='blue', 
                      font=("Avenir", 16))
