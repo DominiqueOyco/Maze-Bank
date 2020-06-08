@@ -14,7 +14,7 @@ Created on Sat Jun  6 21:10:44 2020
 #        self.pack()
 #        self.master.title("Hello World")
 #        
-#        tk.Label(self, text="This is your first GUI.(fuck you)").pack()
+#        tk.Label(self, text="This is your first GUI.(Duck)").pack()
 #        
 #if __name__ == '__main__' :
 #    root = tk.Tk()
