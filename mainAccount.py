@@ -49,7 +49,7 @@ positionDown = int(window.winfo_screenheight()/2 - windowHeight/2)
 
 window.title('Maze Bank of Los Santos')
 #window.geometry("720x480+10+20")
-window.geometry("+{}+{}".format(positionRight, positionDown))
+window.geometry("720x480+{}+{}".format(positionRight, positionDown))
 entbtn=Button(window, text="SIGN IN", fg='blue')
 entbtn.place(x=330, y=290)
 extbtn=Button(window, text="EXIT", fg='blue', command=window.quit)
