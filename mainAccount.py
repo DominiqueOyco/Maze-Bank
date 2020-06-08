@@ -26,15 +26,6 @@ from PIL import ImageTk, Image
 
 window = Tk()
 
-#canvas=Canvas(window, width=720, height=480)
-#mzebnkImg=Image.open('')
-#photo=ImageTk.PhotoImage(mzebnkImg)
-#label=Label(window, image=photo)
-#label.pack()
-
-#bgImage = PhotoImage(file = r"LSBank-GTAV.png")
-#Label(window, image = bgImage).place(relwidth = 1, relheight = 1)
-
 img = ImageTk.PhotoImage(Image.open("LSBank-GTAV.png"))  
 l=Label(image=img)
 l.pack()
